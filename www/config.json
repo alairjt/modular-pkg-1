@@ -1,0 +1,12 @@
+{
+	"routes": [{
+		"name": "m1",
+		"template": "views/teste.html",
+		"controller": "TesteController",
+		"controllerUrl": "js/scripts/controller/teste_ctrl.js",
+		"deps": [
+			"js/scripts/controller/teste_ctrl.js",
+			"js/lib/angular-resource/angular-resource.js"
+		]
+	}]
+}

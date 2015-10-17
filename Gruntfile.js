@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         'dist_www': '../gh-pages',
         'dist_bower': '../bower-repo',
         'www_server': 'localhost',
-        'www_port': '9768',
+        'www_port': '9778',
         'e2e_port': '9769'
     };
     
@@ -153,7 +153,7 @@ module.exports = function (grunt) {
         open: {
             'serve-www': {
                 path: 'http://<%= cvars.www_server %>:<%= cvars.www_port %>/www/',
-                app: 'Google Chrome'
+                app: 'Chrome'
             }
         },
         karma: {
@@ -167,11 +167,11 @@ module.exports = function (grunt) {
             },
             'build': {
                 configFile: '<%= cvars.build %>/test/conf/karma.unit.js',
-                browsers: ['PhantomJS','Chrome','Firefox']
+                browsers: ['PhantomJS']
             },
             'build-min': {
                 configFile: '<%= cvars.build %>/test/conf/karma.unit.min.js',
-                browsers: ['PhantomJS','Chrome','Firefox']
+                browsers: ['PhantomJS']
             },
             'build-travis': {
                 configFile: '<%= cvars.build %>/test/conf/karma.unit.min.js'
